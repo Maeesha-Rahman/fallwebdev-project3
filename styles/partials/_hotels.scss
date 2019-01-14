@@ -1,0 +1,81 @@
+.hotels {
+	background-color: $bgColor;
+	color: $accentColor-3;
+	padding-bottom: 9rem;
+	padding-top: 4rem;
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.hotels__info {
+			margin-bottom: 35px;
+			width: calc((100% - 35px) / 2);
+
+			img {
+				width: 100%;
+				display: block;
+			}
+
+			&--bottom {
+				h3 {
+					@include primaryFont(2.2rem);
+				}
+			}
+
+			&--top {
+				position: relative;
+				.overlay {
+					position: absolute;
+					left: 20px;
+					z-index: 1;
+					bottom: -3rem;
+				}
+
+				.room-price {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					background-color: rgba($accentColor-2, .8);
+					p {
+						margin: 0;
+						font-size: 2rem;
+						padding-top: 1rem;
+						padding-bottom: 3rem;
+						padding-left: 2rem;
+						padding-right: 2rem;
+					}
+				}
+			}
+		}
+	}
+
+	&__content {
+		h2 {
+		  @include sectionHeadings;
+		  text-align: center;
+		  color: $accentColor-3;
+		}
+	}
+}
+
+.hotels__info--top {
+	.overlay {
+		img  {
+			display: block;
+		}
+		.rate {
+			width: 100%;
+		}
+	}
+}
+
+/* Media Query */
+@media all and (max-width: 650px) {
+	.hotels {
+		.hotels__info {
+		width: 100%;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+// variables
+$primaryColor: #225470;
+$accentColor: #34d9b9;
+$accentColor-2: #000;
+$accentColor-3: #fff;
+$accentColor-4: #f6f7f9;
+$bgColor: #19242b;
+
+// mixins
+
+@mixin primaryFont($size) {
+	font-size: $size;
+	font-family: 'Roboto', sans-serif;
+}
+
+@mixin secondaryFont($size) {
+	font-size: $size;
+	font-family:'Playfair Display', serif;
+}
+
+@mixin sectionHeadings {
+	font-size: 4rem;
+	letter-spacing: 5px;
+	font-family: 'Roboto', sans-serif;
+	color: $accentColor-2;
+	text-transform: uppercase;
+	margin-top: 0;
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+}
+
+.wrapper {
+	max-width: 1080px;
+	margin: 0 auto;
+	width: 75%;
+}
+
+p {
+	@include secondaryFont(1.6rem);
+}
